@@ -3,7 +3,6 @@ const client = new Discord.Client();
 const prefix = "t?";
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
-	console.user.setStatus("idle");
 	client.user.setGame("with Nikhil | t?help")});
  client.on('message', msg => { 
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
