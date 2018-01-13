@@ -54,7 +54,7 @@ client.on('ready', () => {
      		let ans = ["I am bot, else who?","I AM TOUKA","I am a bot created with full love and perserverance by Nikhil","I am girl! And Nikhil's waifu too"];
      		msg.channel.send(ans[Math.floor(Math.random() * ans.length)]);}
      		else if(args[0] == 'Hii' || args[0] == 'Hi' || args[0] == 'Hello'){
-     			if (msg.author.id ==397619253739782144){
+     			if (msg.author.id ==310768205121358515){
      				msg.channel.send("Hii Master Nikhil");}
      				else{
      					ans = ["Hello 👋","Hii, do you know where my master is? ","Hii there, I am Touka","My master said there's no problem talking to you. So Hello 👋"]
@@ -136,7 +136,7 @@ client.on('ready', () => {
      }
     
 		if (cmd==='eval') {
-			if(msg.author.id==310768205121585153){
+			if(msg.author.id==310768205121358515){
 			try {
 				msg.channel.send("```js\n"+eval(msg.content.split(" ").slice(1).join(" "))+"```");
 				msg.react("");
