@@ -7,7 +7,7 @@ client.on('ready', () => {
  client.on('message', msg => { 
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
- 	if(!msg.content.startsWith(conf.prefix) || msg.author.bot) return;
+ 	if(!msg.content.startsWith(prefix) || msg.author.bot) return;
  	if (cmd === 'ping') { msg.channel.send('Pong! Took ' + Math.floor(client.ping) + 'ms'); 
  	}
  	if(cmd === 'avatar' || cmd ==='ava'){
