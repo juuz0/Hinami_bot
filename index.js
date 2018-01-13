@@ -1,11 +1,11 @@
 const Discord = require("discord.js"); 
-const conf = require("./config.json")
 const client = new Discord.Client();
+const prefix = "t?";
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("Bot Wars | Use t?help for help box")});
  client.on('message', msg => { 
- 	const args = msg.content.slice(conf.prefix.length).trim().split(/ +/g);
+ 	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
  	if(!msg.content.startsWith(conf.prefix) || msg.author.bot) return;
  	if (cmd === 'ping') { msg.channel.send('Pong! Took ' + Math.floor(client.ping) + 'ms'); 
@@ -152,7 +152,7 @@ client.on('ready', () => {
      }
      
      		});
-client.login(conf.token); 
+client.login(process.env.BOT_TOKEN); 
     
     
     
