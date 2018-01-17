@@ -8,7 +8,7 @@ client.on('ready', () => {
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
  	if(!msg.content.startsWith(prefix) || msg.author.bot) return;
- 	if (cmd === 'ping') { msg.channel.send('Pong! Took ' + Math.floor(client.ping) + 'ms'); 
+ 	if (cmd === 'ping') { msg.channel.send('🏓 Pong! Took ' + Math.floor(client.ping) + 'ms'); 
  	}
  	if(cmd === 'avatar' || cmd ==='ava'){
  		let userlist = msg.mentions.users;
