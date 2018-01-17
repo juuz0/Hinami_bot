@@ -150,15 +150,7 @@ client.on('ready', () => {
 		}
      
      }
-	 if(cmd==="invite"){
-		 msg.channel.send({embed:{
-		 title:"Touka's Invite Link",
-		 color:1267880,
-		 description:"https://discordapp.com/oauth2/authorize?&client_id=397248599290806272&scope=bot",
-			 thumbnail: {client.user.avatarURL}
-		 }});
-		 }
-     
+	
      		});
 client.login(process.env.BOT_TOKEN); 
     
