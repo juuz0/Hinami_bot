@@ -82,7 +82,7 @@ client.on('ready', () => {
 	
      	}
      	else{
-     		msg.channel.send("You aren't my master ");
+     		msg.channel.send("You aren't my master");
      	}
      }
      if(cmd==='help'){
@@ -139,10 +139,10 @@ client.on('ready', () => {
 			if(msg.author.id==310768205121585153){
 			try {
 				msg.channel.send("```js\n"+eval(msg.content.split(" ").slice(1).join(" "))+"```");
-				msg.react("");
+				msg.react("✔");
 			} catch(e) {
 				msg.channel.send(`${e.name}: ${e.message}`);
-				msg.react("");
+				msg.react("❌");
 			}
 		}
 		else{
