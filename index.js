@@ -151,6 +151,10 @@ client.on('ready', () => {
 		}
      
      }
+	 if(cmd==='invite'){
+		 let embed = new Discord.RichEmbed().setTitle("Touka's invite link").setDescription("Feel free to uncheck any permission");
+		 msg.channel.send({embed:embed});
+		 }
 	
      		});
 client.login(process.env.BOT_TOKEN); 
