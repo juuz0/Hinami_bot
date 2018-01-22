@@ -71,6 +71,7 @@ client.on('ready', () => {
      	if(!w){msg.channel.send("Please give *SOMETHING* to spam!");	}
 	     if(x>30){msg.channel.send("I am tired of spamming too much..Let me restore energy");}
      	if(w){if(!x) {msg.channel.send("You dont want to give any number.Ok I will spam 5 times")
+		      else{
      	for(let i=0;i<5;i++){
      		msg.channel.send(`${w}`);}}
      		if(x){
