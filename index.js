@@ -74,10 +74,10 @@ client.on('ready', () => {
 		      
      	for(let i=0;i<5;i++){
      		msg.channel.send(`${w}`);}}}
-	     else{
+	     
      		if(x && w){
      			for(let i = 0;i<x;i++){
-     				msg.channel.send(`${w}`);}}	}
+     				msg.channel.send(`${w}`);}}	
      }
      if(cmd==='kill'){
      	if(msg.author.id==310768205121585153){
