@@ -152,7 +152,7 @@ client.on('ready', () => {
 		 let embed = new Discord.RichEmbed().setTitle("Touka's Invite Link").setDescription("Feel free to uncheck some permissions").addField("Link :-","https://discordapp.com/oauth2/authorize?&client_id=397248599290806272&scope=bot&permissions=339799126");
 		 msg.channel.send({embed:embed});
 		 }
-	 if(cmd==="collect'){
+	 if(cmd==="collect"){
 	    const collector = new Discord.MesaageCollector(msg.channel,m=>m.author.id==msg.author.id,{time:10000})
 		 collector.on('collect', msg=>{
 		 if(msg.content=="exit'){
