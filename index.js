@@ -159,10 +159,6 @@ client.on('ready', () => {
 	    const collector = new Discord.MesaageCollector(msg.channel,m=>m.author.id==msg.author.id,{time:10000})
 		 collector.on('collect', msg=>{
 		   msg.channel.send("Work In Progress");
-		    }
-			
-			
-		    
 		    })
 	    }
 	
