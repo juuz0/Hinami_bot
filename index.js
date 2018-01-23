@@ -5,6 +5,7 @@ client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | t?help")});
  client.on('message', msg => { 
+	 
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
  	if(!msg.content.startsWith(prefix) || msg.author.bot) return;
