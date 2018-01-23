@@ -70,7 +70,7 @@ client.on('ready', () => {
      	let x = args[0]
      	let w= msg.content.split(" ").slice(2).join(" ")
 	let userlist = msg.mentions.users;
-	if(userlist.size==0){msg.channel.send("Please dont mention someone");}     
+	if(userlist.size>0){msg.channel.send("Please dont mention someone");}     
      	else if(!w){msg.channel.send("Please give *SOMETHING* to spam!");	}
 	else if(x>30){msg.channel.send("I am tired of spamming too much..Let me restore energy");}
      	else {
@@ -158,8 +158,7 @@ client.on('ready', () => {
 	 if(cmd==="collect"){
 	    const collector = new Discord.MesaageCollector(msg.channel,m=>m.author.id==msg.author.id,{time:10000})
 		 collector.on('collect', msg=>{
-		 if(msg.content=="exit"){
-		   msg.channel.send("Exitted");
+		   msg.channel.send("Work In Progress");
 		    }
 			
 			
