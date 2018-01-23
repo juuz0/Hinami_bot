@@ -155,7 +155,7 @@ client.on('ready', () => {
 	 if(cmd==="collect"){
 	    const collector = new Discord.MesaageCollector(msg.channel,m=>m.author.id==msg.author.id,{time:10000})
 		 collector.on('collect', msg=>{
-		 if(msg.content=="exit'){
+		 if(msg.content=="exit"){
 		   msg.channel.send("Exitted");
 		    }
 			
