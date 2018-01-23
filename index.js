@@ -70,7 +70,7 @@ client.on('ready', () => {
      	let x = args[0]
      	let w= msg.content.split(" ").slice(2).join(" ")
 	let userlist = msg.mentions.users;
-	if(userlist.size>0){msg.channel.send("Please dont mention someone");}     
+	if(userlist.size>0){msg.channel.send("Please don't mention someone");}     
      	else if(!w){msg.channel.send("Please give *SOMETHING* to spam!");	}
 	else if(x>30){msg.channel.send("I am tired of spamming too much..Let me restore energy");}
      	else {
@@ -123,6 +123,10 @@ client.on('ready', () => {
      				name:"spam <times> <word>",
      				value:"Touka can spam! Just give what to spam(word) and how many times to spam(times)"
      			},
+			{
+				name:"invite",
+				value:"Invite link for the bot"
+			},
      			{
      				name:"help",
      				value:"Shows the help box."
@@ -155,13 +159,7 @@ client.on('ready', () => {
 		 let embed = new Discord.RichEmbed().setTitle("Touka's Invite Link").setDescription("Feel free to uncheck some permissions").addField("Link :-","https://discordapp.com/oauth2/authorize?&client_id=397248599290806272&scope=bot&permissions=339799126");
 		 msg.channel.send({embed:embed});
 		 }
-	 if(cmd==="collect"){
-	    const collector = new Discord.MesaageCollector(msg.channel,m=>m.author.id==msg.author.id,{time:10000})
-		 collector.on('collect', msg=>{
-		   msg.channel.send("Work In Progress");
-		    })
-	    }
-	
+	 
      		});
 client.login(process.env.BOT_TOKEN); 
     
