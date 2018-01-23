@@ -69,9 +69,11 @@ client.on('ready', () => {
      if(cmd ==='spam'){
      	let x = args[0]
      	let w= msg.content.split(" ").slice(2).join(" ")
-     	if(!w){msg.channel.send("Please give *SOMETHING* to spam!");	}
-	     if(x>30){msg.channel.send("I am tired of spamming too much..Let me restore energy");}
-     		else {
+	let userlist = msg.mentions.users;
+	if(userlist.size==0){msg.channel.send("Please dont mention someone");}     
+     	else if(!w){msg.channel.send("Please give *SOMETHING* to spam!");	}
+	else if(x>30){msg.channel.send("I am tired of spamming too much..Let me restore energy");}
+     	else {
      			for(let i = 0;i<x;i++){
      				msg.channel.send(`${w}`);}}	
      }
