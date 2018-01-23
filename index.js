@@ -159,7 +159,20 @@ client.on('ready', () => {
 		 let embed = new Discord.RichEmbed().setTitle("Touka's Invite Link").setDescription("Feel free to uncheck some permissions").addField("Link :-","https://discordapp.com/oauth2/authorize?&client_id=397248599290806272&scope=bot&permissions=339799126");
 		 msg.channel.send({embed:embed});
 		 }
-	 
+	 if(cmd=='rps'){
+		let choice = ["rock","paper","scissors"];
+		let resp = new Discord.MessageCollector(msg.channel,m=>m.author.id==msg.author.id,{time:5000})
+		resp.on('collect',msg=>{
+		let cont = msg.content;
+		let ch = choice[Math.floor(Math.random()*choice.length)];
+		if(cont=='rock'){ if(ch=='paper'){msg.channel.send("You lose! So sad...")}
+				 else if(ch=='scissors'){msg.channel.send("You won! Hurray!!")}
+				 else if(ch=='rock'){msg.channel.send("It's a tie! Try once more")}
+				 else{msg.channel.send("Not a valid move!")}
+				 }
+				
+				});
+	 }
      		});
 client.login(process.env.BOT_TOKEN); 
     
