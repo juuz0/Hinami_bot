@@ -161,15 +161,26 @@ client.on('ready', () => {
 		 }
 	 if(cmd=='rps'){
 		let choice = ["rock","paper","scissors"];
+		 msg.channel.send("Game Started! Choose :- rock, paper or scissors")
 		let resp = new Discord.MessageCollector(msg.channel,m=>m.author.id==msg.author.id,{time:5000})
 		resp.on('collect',msg=>{
-		let cont = msg.content;
+		let cont = msg.content.toLowerCase();
 		let ch = choice[Math.floor(Math.random()*choice.length)];
-		if(cont=='rock'){ if(ch=='paper'){msg.channel.send("You lose! So sad...")}
-				 else if(ch=='scissors'){msg.channel.send("You won! Hurray!!")}
-				 else if(ch=='rock'){msg.channel.send("It's a tie! Try once more")}
-				 else{msg.channel.send("Not a valid move!")}
-				 }
+		if(cont=='rock'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou lose! So sad...")}
+				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou won! Hurray!!")}
+				 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nIt's a tie! Try once more")}
+			 }
+		else if(cont=='paper'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou won!Hurray")}
+				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou won!Hurray")}
+				 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou won!Hurray")}
+			 }
+		else if(cont=='scissors'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou won!Hurray")}
+			 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou won!Hurray")}
+			 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou won!Hurray")}
+			 }
+		else{
+			msg.channel.send("Not a valid response!")
+		}
 				
 				});
 	 }
