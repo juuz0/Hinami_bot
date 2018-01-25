@@ -184,8 +184,8 @@ client.on('ready', () => {
 		}
 				
 				});
-		resp.on('end',msg=>{
-			msg.channel.send("Game Over");
+		resp.on('end',ms=>{
+			ms.channel.send("Game Over");
 		});	
 	 }
      		});
