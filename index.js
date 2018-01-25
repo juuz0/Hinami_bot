@@ -162,22 +162,24 @@ client.on('ready', () => {
 		 }
 	 if(cmd=='rps'){
 		let choice = ["rock","paper","scissors"];
+		 let cs = 0
+		 let ps = 0
 		 msg.channel.send("Game Started! Choose :- rock, paper or scissors")
-		let resp = new Discord.MessageCollector(msg.channel,m=>m.author.id==msg.author.id,{time:5000})
+		let resp = new Discord.MessageCollector(msg.channel,m=>m.author.id==msg.author.id,{time:15000})
 		resp.on('collect',msg=>{
 		let cont = msg.content.toLowerCase();
-		let ch = choice[Math.floor(Math.random()*choice.length)];
-		if(cont=='rock'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou lose! So sad...")}
-				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou won! Hurray!!")}
+		let ch = choice[Math.floor(Math.random()*choice.length)];	
+		if(cont=='rock'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou lose! So sad...");cs+=1}
+				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou won! Hurray!!");ps+=1}
 				 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nIt's a tie! Try once more")}
 			 }
 		else if(cont=='paper'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nIt's a tie! Try once more")}
-				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou lose! So sad...")}
-				 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou won!Hurray")}
+				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou lose! So sad...");cs+=1}
+				 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou won!Hurray");ps+=1}
 			 }
-		else if(cont=='scissors'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou won!Hurray")}
+		else if(cont=='scissors'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou won!Hurray");ps+=1}
 			 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYIt's a tie! Try once more")}
-			 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou lose! So sad...")}
+			 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou lose! So sad...");cs+=1}
 			 }
 		else{
 			msg.channel.send("Not a valid response!")
@@ -185,7 +187,7 @@ client.on('ready', () => {
 				
 				});
 		resp.on('end',(collected,reason)=>{
-			msg.channel.send("Game Over");
+			msg.channel.send("Game Over\nScore :-\n"+"You : "+ps+"Me : "+cs);
 		});	
 	 }
      		});
