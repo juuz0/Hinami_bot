@@ -171,13 +171,13 @@ client.on('ready', () => {
 				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou won! Hurray!!")}
 				 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nIt's a tie! Try once more")}
 			 }
-		else if(cont=='paper'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou won!Hurray")}
-				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou won!Hurray")}
+		else if(cont=='paper'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nIt's a tie! Try once more")}
+				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou lose! So sad...")}
 				 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou won!Hurray")}
 			 }
 		else if(cont=='scissors'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou won!Hurray")}
-			 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou won!Hurray")}
-			 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou won!Hurray")}
+			 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYIt's a tie! Try once more)}
+			 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou lose! So sad...")}
 			 }
 		else{
 			msg.channel.send("Not a valid response!")
