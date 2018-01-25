@@ -187,7 +187,7 @@ client.on('ready', () => {
 				
 				});
 		resp.on('end',(collected,reason)=>{
-			msg.channel.send("Game Over\nScore :-\n"+"You : "+ps+"Me : "+cs);
+			msg.channel.send("Game Over\nScore :-\n"+"You : "+ps+" |  Me : "+cs);
 		});	
 	 }
      		});
