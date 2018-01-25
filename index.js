@@ -185,7 +185,7 @@ client.on('ready', () => {
 				
 				});
 		resp.on('end',(collected,reason)=>{
-			collected.channel.send("Game Over");
+			msg.channel.send("Game Over");
 		});	
 	 }
      		});
