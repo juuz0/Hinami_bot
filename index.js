@@ -184,6 +184,9 @@ client.on('ready', () => {
 		}
 				
 				});
+		resp.on('end',msg=>{
+			msg.channel.send("Game Over");
+		});	
 	 }
      		});
 client.login(process.env.BOT_TOKEN); 
