@@ -178,7 +178,7 @@ client.on('ready', () => {
 				 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou won!Hurray");ps+=1}
 			 }
 		else if(cont=='scissors'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou won!Hurray");ps+=1}
-			 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYIt's a tie! Try once more")}
+			 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nIt's a tie! Try once more")}
 			 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou lose! So sad...");cs+=1}
 			 }
 		else{
