@@ -1,4 +1,5 @@
-const Discord = require("discord.js"); 
+const Discord = require("discord.js");
+const webdict = require("webdict");
 const client = new Discord.Client()
 const prefix = "t?";
 client.on('ready', () => { 
@@ -156,6 +157,9 @@ client.on('ready', () => {
 		}
      
      }
+	 if(cmd==='dict'){
+		 webdict('urbandictionary',msg.content.slice(0)).then(response=>{msg.channel.send(response)});
+		 }
 	 if(cmd==='invite'){
 		 let embed = new Discord.RichEmbed().setTitle("Touka's Invite Link").setDescription("Feel free to uncheck some permissions").addField("Link :-","https://discordapp.com/oauth2/authorize?&client_id=397248599290806272&scope=bot&permissions=339799126");
 		 msg.channel.send({embed:embed});
@@ -190,7 +194,10 @@ client.on('ready', () => {
 			msg.channel.send("Game Over\nScore :-\n"+"You : "+ps+" |  Me : "+cs);
 		});	
 	 }
-     		});
+     
+ 
+ 
+ });
 client.login(process.env.BOT_TOKEN); 
     
     
