@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/2002nikhiltanwar/Touka_bot#readme",
   "dependencies": {
-    "discord.js": "^11.2.1"
+    "discord.js": "^11.2.1",
+    "webdict"
   }
 }
