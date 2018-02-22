@@ -39,9 +39,9 @@ client.on('ready', () => {
     if(cmd === 'sub') { msg.channel.send("Answer is "+(parseInt(args[0]) - parseInt(args[1])));}
     
    if(cmd==='say'){
-     
+     msg.delete();
    	msg.channel.send(""+msg.content.split(" ").splice(1).join(" "));
-  msg.delete(); }
+   }
     
     if(cmd==='ar'){
     	let role = msg.mentions.roles.first();
