@@ -125,10 +125,12 @@ client.on('ready', () => {
      				name:"spam <times> <word>",
      				value:"Touka can spam! Just give what to spam(word) and how many times to spam(times)"
      			},
+				
 			{
 				name:"invite",
 				value:"Invite link for the bot"
 			},
+				
      			{
      				name:"help",
      				value:"Shows the help box."
@@ -157,10 +159,9 @@ client.on('ready', () => {
 		}
      
      }
-	 if(cmd==='dict'){
-		 webdict('urbandictionary',msg.content.slice(1)).then(response=>{if(response.statusCode==200){msg.channel.send({embed:new Discord.RichEmbed().setTitle(args[0]).setDescription(response.definition[0])})} 
-										 else if(response.statusCode==403){msg.reply("Please check the spelling again")}});
-		 }
+	 if(cmd==='def'){
+		 webdict('urbandictionary',msg.content.slice(1)).then(response=>{msg.channel.send({embed:new Discord.RichEmbed().setTitle(args[0]).setDescription(response.definition[0])})});
+										 
 	 if(cmd==='invite'){
 		 let embed = new Discord.RichEmbed().setTitle("Touka's Invite Link").setDescription("Feel free to uncheck some permissions").addField("Link :-","https://discordapp.com/oauth2/authorize?&client_id=397248599290806272&scope=bot&permissions=339799126");
 		 msg.channel.send({embed:embed});
