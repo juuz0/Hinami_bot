@@ -196,7 +196,7 @@ client.on('ready', () => {
 			msg.channel.send("Game Over\nScore :-\n"+"You : "+ps+" |  Me : "+cs);
 		});	
 	 }
-     else{msg.reply("It isn't a valid command"):}
+     
  
 	
  });
