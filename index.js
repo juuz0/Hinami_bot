@@ -195,10 +195,10 @@ client.on('ready', () => {
 		resp.on('end',(collected,reason)=>{
 			msg.channel.send("Game Over\nScore :-\n"+"You : "+ps+" |  Me : "+cs);
 		});	
-	 
+	 }
      else{msg.reply("It isn't a valid command"):}
  
-	 }
+	
  });
 client.login(process.env.BOT_TOKEN); 
     
