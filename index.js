@@ -129,7 +129,11 @@ client.on('ready', () => {
      			},
 			{
 				name:"def <word> or dict <word>",
-				value:"Tells the definition of a word. def=> from urbandictionary; dict => from dictionary.com 
+				value:"Tells the definition of a word. def=> from urbandictionary; dict => from dictionary.com" 
+			},
+			{
+				name:"rps",
+				value:"A rock-paper-scissors game of 15 seconds" 
 			},
 			{
 				name:"invite",
