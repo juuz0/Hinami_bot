@@ -9,10 +9,10 @@ client.on('ready', () => {
 	 
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
-	const annoy = true 
  	if(!msg.content.startsWith(prefix) || msg.author.bot) return;
-	if(/frost/i.test(msg.content)){msg.channel.send("Did you just say Frost? He is a stupid")} 
- 	if (cmd === 'ping') { msg.channel.send('🏓 Pong! Took ' + Math.floor(client.ping) + 'ms'); 
+	if(msg.guild.name = "Indians United"){if(msg.author.id==419066908910813194){msg.react(":regional_indicator_b:");msg.react(":regional_indicator_a:");msg.react(":regional_indicator_k:");msg.react(":regional_indicator_a:");} 
+					     }
+	if (cmd === 'ping') { msg.channel.send('🏓 Pong! Took ' + Math.floor(client.ping) + 'ms'); 
  	}
  	if(cmd === 'avatar' || cmd ==='ava'){
  		let userlist = msg.mentions.users;
