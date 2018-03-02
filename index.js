@@ -9,7 +9,9 @@ client.on('ready', () => {
 	 
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
+	const annoy = true 
  	if(!msg.content.startsWith(prefix) || msg.author.bot) return;
+	if(/frost/i.test(msg.content)){msg.channel.send("Did you just say Frost? He is a stupid")} 
  	if (cmd === 'ping') { msg.channel.send('🏓 Pong! Took ' + Math.floor(client.ping) + 'ms'); 
  	}
  	if(cmd === 'avatar' || cmd ==='ava'){
@@ -125,7 +127,10 @@ client.on('ready', () => {
      				name:"spam <times> <word>",
      				value:"Touka can spam! Just give what to spam(word) and how many times to spam(times)"
      			},
-				
+			{
+				name:"def <word> or dict <word>",
+				value:"Tells the definition of a word. def=> from urbandictionary; dict => from dictionary.com 
+			},
 			{
 				name:"invite",
 				value:"Invite link for the bot"
@@ -161,7 +166,10 @@ client.on('ready', () => {
      }
 	 if(cmd==='def'){
 		 webdict('urbandictionary',args[0]).then(response=>{msg.channel.send({embed:new Discord.RichEmbed().setTitle(args[0]).setDescription(response.definition[0])})});
-			}							 
+			}
+	  if(cmd==='dict'){
+		 webdict('dictionary',args[0]).then(response=>{msg.channel.send({embed:new Discord.RichEmbed().setTitle(args[0]).setDescription(response.definition[0])})});
+			}
 	 if(cmd==='invite'){
 		 let embed = new Discord.RichEmbed().setTitle("Touka's Invite Link").setDescription("Feel free to uncheck some permissions").addField("Link :-","https://discordapp.com/oauth2/authorize?&client_id=397248599290806272&scope=bot&permissions=339799126");
 		 msg.channel.send({embed:embed});
