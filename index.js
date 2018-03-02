@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const webdict = require("webdict");
 const client = new Discord.Client()
 const prefix = "t?";
+var feedback = [];
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | t?help")});
@@ -10,7 +11,6 @@ client.on('ready', () => {
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
  	if(!msg.content.startsWith(prefix) || msg.author.bot) return;
-	{if(msg.author.id==419066908910813194){msg.react(":regional_indicator_b:");msg.react(":regional_indicator_a:");msg.react(":regional_indicator_k:");msg.react(":regional_indicator_a:");} 
 					     
 	if (cmd === 'ping') { msg.channel.send('🏓 Pong! Took ' + Math.floor(client.ping) + 'ms'); 
  	}
@@ -178,6 +178,8 @@ client.on('ready', () => {
 		 let embed = new Discord.RichEmbed().setTitle("Touka's Invite Link").setDescription("Feel free to uncheck some permissions").addField("Link :-","https://discordapp.com/oauth2/authorize?&client_id=397248599290806272&scope=bot&permissions=339799126");
 		 msg.channel.send({embed:embed});
 		 }
+	 if(cmd=='fd'){feedback.push(msg.content.slice(1);
+				     msg.channel.send("Thank you for your precious feedback")}
 	 if(cmd=='rps'){
 		let choice = ["rock","paper","scissors"];
 		 let cs = 0
