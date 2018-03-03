@@ -178,7 +178,7 @@ client.on('ready', () => {
 		 let embed = new Discord.RichEmbed().setTitle("Touka's Invite Link").setDescription("Feel free to uncheck some permissions").addField("Link :-","https://discordapp.com/oauth2/authorize?&client_id=397248599290806272&scope=bot&permissions=339799126");
 		 msg.channel.send({embed:embed});
 		 }
-	 if(cmd=='fd'){feedback.push(msg.content.slice(1));
+	 if(cmd=='fd'){feedback.push(msg.content.slice(2));
 				     msg.channel.send("Thank you for your precious feedback")}
 	 if(cmd=='rps'){
 		let choice = ["rock","paper","scissors"];
