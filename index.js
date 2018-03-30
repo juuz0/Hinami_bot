@@ -39,7 +39,7 @@ client.on('ready', () => {
     if(cmd === 'mult') {msg.channel.send("Answer is "+(parseInt(args[0]) * parseInt(args[1])));}
     if(cmd === 'div') { msg.channel.send("Answer is "+(parseInt(args[0]) / parseInt(args[1])));}
     if(cmd === 'sub') { msg.channel.send("Answer is "+(parseInt(args[0]) - parseInt(args[1])));}
-    if(msg.author.id==429293389134168077){msg.react(":gay_pride_flag:")}
+   
    if(cmd==='say'){
      msg.delete();
    	msg.channel.send(""+msg.content.split(" ").splice(1).join(" "));
