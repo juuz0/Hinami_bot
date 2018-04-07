@@ -193,7 +193,7 @@ client.on('ready', () => {
 				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou won! Hurray!!");ps+=1}
 				 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nIt's a tie! Try once more")}
 			 }
-		else if(cont=='paper' || cont='p'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nIt's a tie! Try once more")}
+		else if(cont=='paper' || cont=='p'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nIt's a tie! Try once more")}
 				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou lose! So sad...");cs+=1}
 				 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou won!Hurray");ps+=1}
 			 }
