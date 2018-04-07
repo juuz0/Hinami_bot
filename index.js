@@ -184,20 +184,20 @@ client.on('ready', () => {
 		let choice = ["rock","paper","scissors"];
 		 let cs = 0
 		 let ps = 0
-		 msg.channel.send("Game Started! Choose :- rock, paper or scissors")
+		 msg.channel.send("Game Started! Choose :- rock(r), paper(p) or scissors(s)")
 		let resp = new Discord.MessageCollector(msg.channel,m=>m.author.id==msg.author.id,{time:15000})
 		resp.on('collect',msg=>{
 		let cont = msg.content.toLowerCase();
 		let ch = choice[Math.floor(Math.random()*choice.length)];	
-		if(cont=='rock'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou lose! So sad...");cs+=1}
+		if(cont=='rock' || cont=='r'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou lose! So sad...");cs+=1}
 				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou won! Hurray!!");ps+=1}
 				 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nIt's a tie! Try once more")}
 			 }
-		else if(cont=='paper'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nIt's a tie! Try once more")}
+		else if(cont=='paper' || cont='p'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nIt's a tie! Try once more")}
 				 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nYou lose! So sad...");cs+=1}
 				 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou won!Hurray");ps+=1}
 			 }
-		else if(cont=='scissors'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou won! Hurray");ps+=1}
+		else if(cont=='scissors' || cont=='s'){if(ch=='paper'){msg.channel.send("My choice :- Paper \nYou won! Hurray");ps+=1}
 			 else if(ch=='scissors'){msg.channel.send("My choice :- Scissors\nIt's a tie! Try once more")}
 			 else if(ch=='rock'){msg.channel.send("My choice :- Rock\nYou lose! So sad...");cs+=1}
 			 }
@@ -207,7 +207,7 @@ client.on('ready', () => {
 				
 				});
 		resp.on('end',(collected,reason)=>{
-			msg.channel.send("Game Over\nScore :-\n"+`${msg.author.username}`+ps+" |  Touka : "+cs);
+			msg.channel.send("Game Over\nScore :-\n"+`${msg.author.username} : `+ps+" |  Touka : "+cs);
 		});	
 	 }
      
