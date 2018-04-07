@@ -207,7 +207,7 @@ client.on('ready', () => {
 				
 				});
 		resp.on('end',(collected,reason)=>{
-			msg.channel.send("Game Over\nScore :-\n"+`${msg.author.username} : `+ps+" |  Touka : "+cs);
+			msg.channel.send("Game Over\nScore :-\n"+`${msg.author.username} : `+ps+"  |  Touka : "+cs);
 		});	
 	 }
      
