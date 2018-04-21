@@ -4,6 +4,7 @@ const mal = require("mal-scraper"):
 const client = new Discord.Client()
 const prefix = "t?";
 var fd = [];
+
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | t?help")});
