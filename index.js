@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const webdict = require("webdict");
+const mal = require("mal-scraper"):
 const client = new Discord.Client()
 const prefix = "t?";
 var fd = [];
