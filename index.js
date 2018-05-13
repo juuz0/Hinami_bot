@@ -83,7 +83,7 @@ client.on('ready', () => {
      				msg.channel.send(`${w}`);}}	
      }
      if(cmd==='kill'){
-     	if(msg.author.id==445051914283909121){
+     	if(msg.author.id==444896160105103361){
      		msg.channel.send({embed:new Discord.RichEmbed().setDescription("*Bot shutdown...*").setColor("0xAE0608")}).then(()=>client.destroy()).then(()=>process.exit()).catch(()=>process.exit());
 	
      	}
@@ -155,7 +155,7 @@ client.on('ready', () => {
      }
     
 		if (cmd==='eval') {
-			if(msg.author.id==445051914283909121){
+			if(msg.author.id==444896160105103361){
 			try {
 				msg.channel.send({embed:new Discord.RichEmbed().setTitle("REPL").setDescription(""+eval(msg.content.split(" ").slice(1).join(" "))+"")});
 				msg.react("✅");
