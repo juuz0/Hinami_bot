@@ -155,7 +155,7 @@ client.on('ready', () => {
      }
     
 		if (cmd==='eval') {
-			if(msg.author.id==310768205121585153){
+			if(msg.author.id==445051275864965130){
 			try {
 				msg.channel.send({embed:new Discord.RichEmbed().setTitle("REPL").setDescription(""+eval(msg.content.split(" ").slice(1).join(" "))+"")});
 				msg.react("✅");
