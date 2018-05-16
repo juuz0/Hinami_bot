@@ -116,11 +116,7 @@ client.on('ready', () => {
      				name:"say <what_to_say>",
      				value:"Says what you want it to say"
      			},
-     			{
-     				name:"ar and rr",
-     				value:"ar => Add a role. rr => Remove a role. Mention a user"
-     			},
-     			
+     		
      			{
      				name:"spam <times> <word>",
      				value:"Hinami can spam! Just give what to spam(word) and how many times to spam(times)"
