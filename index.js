@@ -19,11 +19,11 @@ client.on('ready', () => {
  		let userlist = msg.mentions.users;
  		if(userlist.size == 0) {
  			if(!args[0]){
- 		msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${msg.author.username}'s Avatar`).setImage(msg.author.avatarURL.slice(0,-4)+"128")});
+ 		msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${msg.author.username}'s Avatar`).setImage(msg.author.avatarURL)});
  		}
  		else if(args[0]){
  			let url = msg.channel.members.array().filter(mmb=>mmb.user.username==args[0])[0].user.avatarURL;
- 				msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${args[0]}'s Avatar`).setImage(url.slice(0,-4)+"128")});
+ 				msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${args[0]}'s Avatar`).setImage(url)});
  	   	
    
  		}
@@ -32,7 +32,7 @@ client.on('ready', () => {
  		
  		userlist.forEach(function (mmb){
  			if(!mmb) msg.reply("Please mention a valid user");
- 		msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${mmb.username}'s Avatar`).setImage(mmb.avatarURL.slice(0, -4) + "128")});
+ 		msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${mmb.username}'s Avatar`).setImage(mmb.avatarURL)});
       });
       }
       //Math Commands
