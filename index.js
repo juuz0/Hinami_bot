@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
 const webdict = require("webdict");
 const client = new Discord.Client()
-const prefix = "t?";
+const prefix = "h!";
 var fd = [];
 
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
-	client.user.setGame("with Nikhil | t?help")});
+	client.user.setGame("with Nikhil | h!help")});
  client.on('message', msg => { 
 	 
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
@@ -57,7 +57,7 @@ client.on('ready', () => {
      
      if(cmd==='talk'){
      	if (args[0] == 'who' && args[1] =='are' && args[2]=='you'){
-     		let ans = ["I am bot, else who?","I AM TOUKA","I am a bot created with full love and perserverance by Nikhil","I am girl! And Nikhil's waifu too"];
+     		let ans = ["I am bot, else who?","I AM Hinami","I am a bot created with full love and perserverance by Nikhil","I am girl! And Nikhil's waifu too"];
      		msg.channel.send(ans[Math.floor(Math.random() * ans.length)]);}
      		else if(args[0] == 'Hii' || args[0] == 'Hi' || args[0] == 'Hello'){
      			if (msg.author.id ==310768205121585153){
@@ -95,8 +95,8 @@ client.on('ready', () => {
      	msg.channel.send({
      		embed:{
      			color:3447003,
-     			title:"Touka's Help Box",
-     			description:"Prefix is t?",
+     			title:"Hinami's help box",
+     			description:"Prefix => h!",
      			thumbnail:{
      				url:client.user.avatarURL
      			},
@@ -120,13 +120,10 @@ client.on('ready', () => {
      				name:"ar and rr",
      				value:"ar => Add a role. rr => Remove a role. Mention a user"
      			},
-     			{
-     				name:"talk",
-     				value:"Touka can talk to you (Under development)"
-     			},
+     			
      			{
      				name:"spam <times> <word>",
-     				value:"Touka can spam! Just give what to spam(word) and how many times to spam(times)"
+     				value:"Hinami can spam! Just give what to spam(word) and how many times to spam(times)"
      			},
 			{
 				name:"def <word> or dict <word>",
@@ -208,7 +205,7 @@ client.on('ready', () => {
 				
 				});
 		resp.on('end',(collected,reason)=>{
-			msg.channel.send("Game Over\nScore :-\n"+`${msg.author.username} : `+ps+"  |  Touka : "+cs);
+			msg.channel.send("Game Over\nScore :-\n"+`${msg.author.username} : `+ps+"  |  Hinami : "+cs);
 		});	
 	 }
      
