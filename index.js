@@ -216,7 +216,13 @@ client.on('ready', () => {
 		});	
 	 }
      
- 
+ 	if(cmd=='register'){
+		var name = msg.author.username;
+		var ref = firebase.database().ref('profile');
+		var newRef = ref.child(name);
+		newRef.set({
+		name:name});
+	}
 	
  });
 client.login(process.env.BOT_TOKEN); 
