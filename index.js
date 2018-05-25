@@ -229,6 +229,7 @@ client.on('ready', () => {
 		newRef.set({
 		name:name});
 		msg.channel.send("Profile Created :white_check_mark:");
+		users.push(user_id);
 		}
 		
 	}
