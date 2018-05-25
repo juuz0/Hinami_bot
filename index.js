@@ -4,6 +4,7 @@ const client = new Discord.Client();
 var firebase = require("firebase");
 const prefix = "h!";
 var fd = [];
+var users = []; 
 
 var config = {
     apiKey: "AIzaSyC_UXib6mKZYhgGA872SB9xQLuSwzIZM1c",
@@ -217,12 +218,19 @@ client.on('ready', () => {
 	 }
      
  	if(cmd=='register'){
-		var name = msg.author.username;
 		var user_id = msg.author.id;
+		if(users.includes(user_id)){
+			msg.channel.send("Profile already exists.");
+		}
+		else{
+		var name = msg.author.username;
 		var ref = firebase.database().ref('profile');
 		var newRef = ref.child(user_id);
 		newRef.set({
 		name:name});
+		msg.channel.send("Profile Created :white_check_mark:");
+		}
+		
 	}
 	
  });
