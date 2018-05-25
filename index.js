@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const webdict = require("webdict");
-const client = new Discord.Client()
+const client = new Discord.Client();
+var firebase = require("firebase");
 const prefix = "h!";
 var fd = [];
 
