@@ -5,6 +5,16 @@ var firebase = require("firebase");
 const prefix = "h!";
 var fd = [];
 
+var config = {
+    apiKey: "AIzaSyC_UXib6mKZYhgGA872SB9xQLuSwzIZM1c",
+    authDomain: "suzuya-8f1b7.firebaseapp.com",
+    databaseURL: "https://suzuya-8f1b7.firebaseio.com",
+    projectId: "suzuya-8f1b7",
+    storageBucket: "suzuya-8f1b7.appspot.com",
+    messagingSenderId: "543251593878"
+  };
+  firebase.initializeApp(config);
+
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | h!help")});
