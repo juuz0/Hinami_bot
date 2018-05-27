@@ -5,6 +5,7 @@ var firebase = require("firebase");
 const prefix = "h!";
 var fd = [];
 var usersList = [];
+var user_id = msg.author.id;
 
 var config = {
     apiKey: "AIzaSyC_UXib6mKZYhgGA872SB9xQLuSwzIZM1c",
@@ -15,6 +16,11 @@ var config = {
     messagingSenderId: "543251593878"
   };
   firebase.initializeApp(config);
+var userRef = firebase.database().ref('profile/'+user_id);
+var data = [];
+userRef.on('child_added',function(d){
+	data.push(d.val());
+});
 
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
@@ -218,7 +224,7 @@ client.on('ready', () => {
 	 }
      
  	if(cmd=='register'){
-		var user_id = msg.author.id;
+		
 		if(usersList.includes(user_id)){
 			msg.channel.send("Profile already exists.");
 		}
@@ -234,7 +240,10 @@ client.on('ready', () => {
 		}
 		
 	}
+	if(cmd=='profile'){
+	msg.channel.send(data[0]);
 	
+	}
  });
 client.login(process.env.BOT_TOKEN); 
     
