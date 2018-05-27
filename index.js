@@ -5,7 +5,7 @@ var firebase = require("firebase");
 const prefix = "h!";
 var fd = [];
 var usersList = [];
-var user_id = msg.author.id;
+
 
 var config = {
     apiKey: "AIzaSyC_UXib6mKZYhgGA872SB9xQLuSwzIZM1c",
@@ -27,7 +27,7 @@ client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | h!help")});
  client.on('message', msg => { 
-	 
+	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
  	if(!msg.content.startsWith(prefix) || msg.author.bot) return;
