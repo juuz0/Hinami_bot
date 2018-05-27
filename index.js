@@ -16,12 +16,13 @@ var config = {
     messagingSenderId: "543251593878"
   };
   firebase.initializeApp(config);
+/*
 var userRef = firebase.database().ref('profile/'+user_id);
 var data = [];
 userRef.on('child_added',function(d){
 	data.push(d.val());
 });
-
+*/
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | h!help")});
