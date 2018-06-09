@@ -36,6 +36,7 @@ client.on('ready', () => {
  	const cmd = args.shift().toLowerCase();
 	const content = msg.content;
 	if(prof.check(content).length >= 1){
+	msg.delete();
 	var realMessage = prof.purify(content)[0];
 	msg.channel.createWebhook(msg.author.username,msg.author.avatarURL)
 	.then(w=>{w.send(realMessage,{"username":msg.author.username,"avatarURL":msg.author.avatarURL})})
