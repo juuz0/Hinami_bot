@@ -1,7 +1,8 @@
 const Discord = require("discord.js");
 const webdict = require("webdict");
 const client = new Discord.Client();
-var firebase = require("firebase");
+const firebase = require("firebase");
+const prof = require("profanity-util");
 const prefix = "h!";
 var fd = [];
 var usersList = [];
@@ -24,14 +25,7 @@ userRef.on('child_added',function(d){
 });
 */
 
-// Profanity Filter
-function checker(v){
-var words = ["fuck","WTF","nigga"]
-for(var i =0;i<words.length;i++){
-if(v.indexOf(words[i]) > -1){ return false}
-}
- return true;
-}
+
 
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
@@ -40,7 +34,10 @@ client.on('ready', () => {
 	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
-	var prof = msg.content.filter(checker);
+	const content = msg.content;
+	if(prof.check(content).length >= 1){
+	msg.channel.send("yes");
+	}
  	if(!msg.content.startsWith(prefix) || msg.author.bot) return;
 					     
 	if (cmd === 'ping') { msg.channel.send('🏓 Pong! Took ' + Math.floor(client.ping) + 'ms'); 
