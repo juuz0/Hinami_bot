@@ -23,6 +23,16 @@ userRef.on('child_added',function(d){
 	data.push(d.val());
 });
 */
+
+// Profanity Filter
+function checker(v){
+var words = ["fuck","WTF","nigga"]
+for(var i =0;i<words.length;i++){
+if(v.indexOf(words[i]) > -1){ return false}
+}
+ return true;
+}
+
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | h!help")});
@@ -30,6 +40,7 @@ client.on('ready', () => {
 	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
+	var prof = msg.content.filter(checker);
  	if(!msg.content.startsWith(prefix) || msg.author.bot) return;
 					     
 	if (cmd === 'ping') { msg.channel.send('🏓 Pong! Took ' + Math.floor(client.ping) + 'ms'); 
@@ -245,6 +256,7 @@ client.on('ready', () => {
 	msg.channel.send(data[0]);
 	
 	}
+	
  });
 client.login(process.env.BOT_TOKEN); 
     
