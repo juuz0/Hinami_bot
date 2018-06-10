@@ -3,7 +3,7 @@ const webdict = require("webdict");
 const client = new Discord.Client();
 const firebase = require("firebase");
 const prof = require("profanity-util");
-const prefix = "h!";
+const prefix = "iu ";
 var fd = [];
 var usersList = [];
 
