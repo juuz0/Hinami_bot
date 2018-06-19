@@ -1,31 +1,9 @@
 const Discord = require("discord.js");
 const webdict = require("webdict");
 const client = new Discord.Client();
-const firebase = require("firebase");
-const prof = require("profanity-util");
 const prefix = "iu ";
 var fd = [];
 var usersList = [];
-
-
-var config = {
-    apiKey: "AIzaSyC_UXib6mKZYhgGA872SB9xQLuSwzIZM1c",
-    authDomain: "suzuya-8f1b7.firebaseapp.com",
-    databaseURL: "https://suzuya-8f1b7.firebaseio.com",
-    projectId: "suzuya-8f1b7",
-    storageBucket: "suzuya-8f1b7.appspot.com",
-    messagingSenderId: "543251593878"
-  };
-  firebase.initializeApp(config);
-/*
-var userRef = firebase.database().ref('profile/'+user_id);
-var data = [];
-userRef.on('child_added',function(d){
-	data.push(d.val());
-});
-*/
-
-
 
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
@@ -34,13 +12,6 @@ client.on('ready', () => {
 	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
-	const content = msg.content;
-	if(prof.check(content).length >= 1){
-	msg.delete();
-	var realMessage = prof.purify(content)[0];
-	msg.channel.createWebhook(msg.author.username,msg.author.avatarURL)
-	.then(w=>{w.send(realMessage,{"username":msg.author.username,"avatarURL":msg.author.avatarURL})})
-	}
  	if(!msg.content.startsWith(prefix) || msg.author.bot) return;
 					     
 	if (cmd === 'ping') { msg.channel.send('🏓 Pong! Took ' + Math.floor(client.ping) + 'ms'); 
@@ -235,28 +206,7 @@ client.on('ready', () => {
 		});	
 	 }
      
- 	if(cmd=='register'){
-		
-		if(usersList.includes(user_id)){
-			msg.channel.send("Profile already exists.");
-		}
-		else{
-		function postData(user_id,name){
-		firebase.database().ref('profile').child(user_id).set({
-		username:name});
-		msg.channel.send("Profile Created :white_check_mark:");
-		usersList.push(user_id);
-		}
-		postData(msg.author.id,msg.author.username)
-		
-		}
-		
-	}
-	if(cmd=='profile'){
-	msg.channel.send(data[0]);
-	
-	}
-	
+
  });
 client.login(process.env.BOT_TOKEN); 
     
