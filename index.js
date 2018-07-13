@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const webdict = require("webdict");
 const client = new Discord.Client();
-const prefix = "h!" | "hinami ";
+const prefix = "h!";
 var fd = [];
 var usersList = [];
 
