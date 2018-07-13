@@ -17,6 +17,7 @@ client.on('ready', () => {
 	if (cmd === 'ping') { msg.channel.send('🏓 Pong! Took ' + Math.floor(client.ping) + 'ms'); 
  	}
  	if(cmd === 'avatar' || cmd ==='ava'){
+		try {
  		let userlist = msg.mentions.users;
  		if(userlist.size == 0) {
  			if(!args[0]){
@@ -35,6 +36,10 @@ client.on('ready', () => {
  			if(!mmb) msg.reply("Please mention a valid user");
  		msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${mmb.username}'s Avatar`).setImage(mmb.avatarURL)});
       });
+		}
+		catch(e){
+		msg.channel.send("Please sepcify a valid user");
+		}
       }
       //Math Commands
    if(cmd === 'add') { msg.channel.send("Answer is "+(parseInt(args[0]) + parseInt(args[1])));}
