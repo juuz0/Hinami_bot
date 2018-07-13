@@ -38,7 +38,7 @@ client.on('ready', () => {
       });
 		}
 		catch(e){
-		msg.channel.send("Please sepcify a valid user");
+		msg.channel.send("Couldn't find the user..Are you sure about that username?");
 		}
       }
       //Math Commands
