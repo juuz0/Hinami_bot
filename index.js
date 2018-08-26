@@ -122,11 +122,6 @@ client.on('ready', () => {
      				name:"say <what_to_say>",
      				value:"Says what you want it to say"
      			},
-     		
-     			{
-     				name:"spam <times> <word>",
-     				value:"Hinami can spam! Just give what to spam(word) and how many times to spam(times)"
-     			},
 			{
 				name:"def <word> or dict <word>",
 				value:"Tells the definition of a word. def=> from urbandictionary; dict => from dictionary.com" 
