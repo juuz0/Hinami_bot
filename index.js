@@ -77,17 +77,7 @@ client.on('ready', () => {
      			else { msg.channel.send("I can't answer these questions now but maybe I can in future :)")}
      			}
      			
-     if(cmd ==='spam'){
-     	let x = args[0]
-     	let w= msg.content.split(" ").slice(2).join(" ")
-	let userlist = msg.mentions.users;
-	if(userlist.size>0){msg.channel.send("Please don't mention someone");}     
-     	else if(!w){msg.channel.send("Please give *SOMETHING* to spam!");	}
-	else if(x>30){msg.channel.send("I am tired of spamming too much..Let me restore energy");}
-     	else {
-     			for(let i = 0;i<x;i++){
-     				msg.channel.send(`${w}`);}}	
-     }
+    
      if(cmd==='kill'){
      	if(msg.author.id==444896160105103361){
      		msg.channel.send({embed:new Discord.RichEmbed().setDescription("*Bot shutdown...*").setColor("0xAE0608")}).then(()=>client.destroy()).then(()=>process.exit()).catch(()=>process.exit());
