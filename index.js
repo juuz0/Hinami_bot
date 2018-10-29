@@ -2,9 +2,10 @@ const Discord = require("discord.js");
 const webdict = require("webdict");
 const client = new Discord.Client();
 const prefix = "h!";
-var fd = [];
-var usersList = [];
-
+var year = 2018;
+var birthdays = {
+341958485724102668:new Date(year,9,21)
+}
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | h!help")});
