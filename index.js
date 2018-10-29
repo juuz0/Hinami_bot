@@ -42,10 +42,10 @@ client.on('ready', () => {
 		}
       }
       //Math Commands
-   if(cmd === 'add') { msg.channel.send("Answer is "+(parseInt(args[0]) + parseInt(args[1])));}
-    if(cmd === 'mult') {msg.channel.send("Answer is "+(parseInt(args[0]) * parseInt(args[1])));}
-    if(cmd === 'div') { msg.channel.send("Answer is "+(parseInt(args[0]) / parseInt(args[1])));}
-    if(cmd === 'sub') { msg.channel.send("Answer is "+(parseInt(args[0]) - parseInt(args[1])));}
+   if(cmd === 'add') { msg.channel.send("Answer is "+(parseFloat(args[0]) + parseFloat(args[1])));}
+    if(cmd === 'mult') {msg.channel.send("Answer is "+(parseFloat(args[0]) * parseFloat(args[1])));}
+    if(cmd === 'div') { msg.channel.send("Answer is "+(parseFloat(args[0]) / parseFloat(args[1])));}
+    if(cmd === 'sub') { msg.channel.send("Answer is "+(parseFloat(args[0]) - parseFloat(args[1])));}
    
    if(cmd==='say'){
      msg.delete();
