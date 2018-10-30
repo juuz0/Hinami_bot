@@ -84,7 +84,8 @@ b.send('Happy Birthday <@' + i.toString() + '>')
     if(cmd === 'mult') {msg.channel.send("Answer is "+(parseFloat(args[0]) * parseFloat(args[1])));}
     if(cmd === 'div') { msg.channel.send("Answer is "+(parseFloat(args[0]) / parseFloat(args[1])));}
     if(cmd === 'sub') { msg.channel.send("Answer is "+(parseFloat(args[0]) - parseFloat(args[1])));}
-   var role = msg.mentions.roles.first();
+   if(cmd==='test'){
+	 var role = msg.mentions.roles.first();
 	let mmb = msg.mentions.members.first();
 	   mmb.addRole(role);
 	    msg.channel.send(`Added ${role.name}`);
