@@ -3,7 +3,6 @@ const webdict = require("webdict");
 const client = new Discord.Client();
 const prefix = "h!";
 var year = 2018;
-
 var birthdays = {
 341958485724102668:new Date(year,9,21),
 315728369369088003:new Date(year,3,1),
