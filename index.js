@@ -87,11 +87,12 @@ b.send('Happy Birthday <@' + i.toString() + '>')
 	 var role = msg.mentions.roles.first();
 	let mmb = msg.mentions.members.first();
 	   mmb.addRole(role);
-	    msg.channel.send(`Added ${role.name}`);
+	    msg.channel.send(`Added ${role.name}`).then(r=>{
 	   setTimeout(function(){
 		   mmb.removeRole(role);
 		   msg.channel.send(`Removed ${role.name}`);
 	   },3000);
+	    }
     }
    if(cmd==='say'){
      msg.delete();
