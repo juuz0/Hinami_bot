@@ -38,11 +38,7 @@ client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | h!help")});
  client.on('message', msg => { 
-	 setInterval(function(){
-var today = new Date()
-var b = msg.guild.channels.find(ch=>ch.name=='make_in_india');
-if(b) b.send('BOOM')
-},5000);
+	 
 	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
