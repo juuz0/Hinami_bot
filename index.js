@@ -94,6 +94,12 @@ b.send('Happy Birthday <@' + i.toString() + '>')
 	   },3000);
 	    });
     }
+	 if(cmd==='now'){
+	 msg.channel.send(new Date()).then(r=>{
+	 setInterval(function(){
+	 msg.edit(new Date())},100)
+	 });
+	 }
    if(cmd==='say'){
      msg.delete();
    	msg.channel.send(""+msg.content.split(" ").splice(1).join(" "));
