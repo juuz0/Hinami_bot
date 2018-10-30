@@ -3,7 +3,7 @@ const webdict = require("webdict");
 const client = new Discord.Client();
 const prefix = "h!";
 var year = 2018;
-var today = new Date();
+
 var birthdays = {
 341958485724102668:new Date(year,9,21),
 315728369369088003:new Date(year,3,1),
@@ -31,6 +31,13 @@ var birthdays = {
 443961507051601931:new Date(year,5,15),
 444896160105103361:new Date(year,2,5)
 }
+
+setInterval(function(){
+var today = new Date()
+var b = msg.guild.channels.find(ch=>ch.name=='make_in_india');
+if(b) b.send('BOOM')
+},5000);
+
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | h!help")});
@@ -186,7 +193,7 @@ client.on('ready', () => {
 		 webdict('dictionary',args[0]).then(response=>{msg.channel.send({embed:new Discord.RichEmbed().setTitle(args[0]).setDescription(response.definition[0])})});
 			}
 	 if(cmd==='invite'){
-		 let embed = new Discord.RichEmbed().setTitle("Touka's Invite Link").setDescription("Feel free to uncheck some permissions").addField("Link :-","https://discordapp.com/oauth2/authorize?&client_id=397248599290806272&scope=bot&permissions=339799126");
+		 let embed = new Discord.RichEmbed().setTitle("Hinami's Invite Link").setDescription("Feel free to uncheck some permissions").addField("Link :-","https://discordapp.com/oauth2/authorize?&client_id=397248599290806272&scope=bot&permissions=339799126");
 		 msg.channel.send({embed:embed});
 		 }
 	 if(cmd=='fd'){fd.push(msg.content.split(" ").splice(1).join(" "));
