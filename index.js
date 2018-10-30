@@ -84,7 +84,13 @@ b.send('Happy Birthday <@' + i.toString() + '>')
     if(cmd === 'mult') {msg.channel.send("Answer is "+(parseFloat(args[0]) * parseFloat(args[1])));}
     if(cmd === 'div') { msg.channel.send("Answer is "+(parseFloat(args[0]) / parseFloat(args[1])));}
     if(cmd === 'sub') { msg.channel.send("Answer is "+(parseFloat(args[0]) - parseFloat(args[1])));}
-   
+    if(cmd=='test'){
+   var role = msg.mentions.roles.first();
+	let mmb = msg.mentions.members.first();
+	   mmb.addRole(role);
+	   setTimeout(function(){
+		   mmb.removeRole(role);},3000);
+   }
    if(cmd==='say'){
      msg.delete();
    	msg.channel.send(""+msg.content.split(" ").splice(1).join(" "));
