@@ -4,7 +4,31 @@ const client = new Discord.Client();
 const prefix = "h!";
 var year = 2018;
 var birthdays = {
-341958485724102668:new Date(year,9,21)
+341958485724102668:new Date(year,9,21),
+315728369369088003:new Date(year,3,1),
+361521098111844352:new Date(year,10,11),
+270125856679002113:new Date(year,3,20),
+388273713721901056:new Date(year,5,10),
+270898185961078785:new Date(year,10,3),
+328503649292517376:new Date(year,8,15),
+402829897514352641:new Date(year,8,28),
+360022804357185537:new Date(year,4,29),
+371673235395182592:new Date(year,10,27),
+396540743877001216:new Date(year,11,30),
+429625142444949524:new Date(year,2,31),
+367740727624466433:new Date(year,10,22),
+424878859641421824:new Date(year,1,25),
+385964784803381259:new Date(year,4,25),
+388984732156690433:new Date(year,0,27),
+279318185524723712:new Date(year,1,30),
+274038656002686976:new Date(year,10,2),
+390072368120332289:new Date(year,0,30),
+495949599778013184:new Date(year,3,10),
+364009279101075459:new Date(year,9,6),
+398930752755990549:new Date(year,2,28),
+465914713197248534:new Date(year,1,19),
+443961507051601931:new Date(year,5,15),
+444896160105103361:new Date(year,2,5)
 }
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
