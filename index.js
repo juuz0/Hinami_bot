@@ -95,9 +95,11 @@ b.send('Happy Birthday <@' + i.toString() + '>')
 	    });
     }
 	 if(cmd==='now'){
-	 msg.channel.send(new Date()).then(r=>{
+		 var now = new Date();
+	 msg.channel.send(now).then(r=>{
 	 setInterval(function(){
-	 msg.edit(new Date())},100)
+		  var now = new Date();
+	 msg.edit(now)},100)
 	 });
 	 }
    if(cmd==='say'){
