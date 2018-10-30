@@ -92,7 +92,7 @@ b.send('Happy Birthday <@' + i.toString() + '>')
 		   mmb.removeRole(role);
 		   msg.channel.send(`Removed ${role.name}`);
 	   },3000);
-	    }
+	    });
     }
    if(cmd==='say'){
      msg.delete();
