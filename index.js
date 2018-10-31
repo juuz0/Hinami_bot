@@ -42,7 +42,7 @@ var today = new Date()
 var b = msg.guild.channels.find(ch=>ch.name=='birthdays');
 if (b){
 for(var i in birthdays){
-if (birthdays[i].getDate() == today.getdate() && birthdays[i].getMonth() == today.getMonth() && birthdays[i].getFullYear() == today.getFullYear()){
+if (birthdays[i].getDate() == today.getDate() && birthdays[i].getMonth() == today.getMonth() && birthdays[i].getFullYear() == today.getFullYear()){
 b.send('Happy Birthday <@' + i.toString() + '>')
 }}}
 },1000);
