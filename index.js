@@ -42,10 +42,10 @@ var today = new Date()
 var b = msg.guild.channels.find(ch=>ch.name=='birthdays');
 if (b){
 for(var i in birthdays){
-if (birthdays[i] == today){
+if (birthdays[i].getTime() == today.getTime()){
 b.send('Happy Birthday <@' + i.toString() + '>')
 }}}
-},100);
+},1000);
 	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
