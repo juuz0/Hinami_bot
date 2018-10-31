@@ -37,7 +37,16 @@ client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | h!help")});
  client.on('message', msg => { 
-
+	 setInterval(function(){
+var today = new Date()
+var b = msg.guild.channels.find(ch=>ch.name=='birthdays');
+if (b){
+for(var i in birthdays){
+	var user =client.users.get(i.toString());
+if (birthdays[i].getDate() == today.getDate() && birthdays[i].getMonth() == today.getMonth() && birthdays[i].getFullYear() == today.getFullYear()){
+b.send(`Happy Birthday ${user}! Send Cake!`)
+}}}
+},10000);
 	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
