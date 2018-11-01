@@ -4,7 +4,6 @@ const client = new Discord.Client();
 const prefix = "h!";
 var year = 2018;
 var birthdays = {
-var birthdays = {
 0:["341958485724102668",new Date(year,9,21)],
 1:["315728369369088003",new Date(year,3,1)],
 2:["361521098111844352",new Date(year,10,11)],
