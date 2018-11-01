@@ -28,7 +28,7 @@ var birthdays = {
 21:["398930752755990549":new Date(year,2,28)],
 22:["465914713197248534":new Date(year,1,19)],
 23:["443961507051601931":new Date(year,5,15)],
-24:["444896160105103361":new Date(year,9,31)]
+24:["444896160105103361":new Date(year,10,1)]
 }
 
 
@@ -43,8 +43,8 @@ var b = msg.guild.channels.find(ch=>ch.name=='birthdays');
 if (b){
 for(var i in birthdays){
 	
-if (birthdays[i].getDate() == today.getDate() && birthdays[i].getMonth() == today.getMonth() && birthdays[i].getFullYear() == today.getFullYear()){
-	var user =client.users.get(""+i);
+if (birthdays[i][1].getDate() == today.getDate() && birthdays[i][1].getMonth() == today.getMonth() && birthdays[i][1].getFullYear() == today.getFullYear()){
+	var user =birthdays[i][0];
 	b.send(`Happy Birthday ${user}! Send Cake!`)
 }}}
 },10000);
