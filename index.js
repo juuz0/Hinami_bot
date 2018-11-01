@@ -49,7 +49,7 @@ if (birthdays[i][1].getDate() == today.getDate() && birthdays[i][1].getMonth() =
 	var user = client.users.get(t);
 	b.send(`Happy Birthday ${user}! Send Cake!`)
 }}}
-},20000);
+},2000);
 	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
