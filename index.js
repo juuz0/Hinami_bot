@@ -38,18 +38,18 @@ client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | h!help")});
  client.on('message', msg => { 
-// 	setInterval(function(){
-// var today = new Date()
-// var b = msg.guild.channels.find(ch=>ch.name=='birthdays');
-// if (b){
-// for(var i in birthdays){
+	setInterval(function(){
+var today = new Date()
+var b = msg.guild.channels.find(ch=>ch.name=='birthdays');
+if (b){
+for(var i in birthdays){
 	
-// if (birthdays[i][1].getDate() == today.getDate() && birthdays[i][1].getMonth() == today.getMonth() && birthdays[i][1].getFullYear() == today.getFullYear()){
-// 	var t =birthdays[i][0];
-// 	var user = client.users.get(t);
-// 	b.send(`Happy Birthday ${user}! Send Cake!`)
-// }}}
-// },10000);
+if (birthdays[i][1].getDate() == today.getDate() && birthdays[i][1].getMonth() == today.getMonth() && birthdays[i][1].getFullYear() == today.getFullYear()){
+	var t =birthdays[i][0];
+	var user = client.users.get(t);
+	b.send(`Happy Birthday ${user}! Send Cake!`)
+}}}
+},86400000);
 	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
