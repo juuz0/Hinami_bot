@@ -107,8 +107,11 @@ client.on('ready', () => {
 	 });
 	 }
 	 if(cmd=='now'){
-	 msg.channel.send('kek');
-	 msg.edit('kok');}
+	 msg.channel.send('kek').then((m)=>{
+	 msg.edit("kok");
+	 })
+	 
+	 }
    if(cmd==='say'){
      msg.delete();
    	msg.channel.send(""+msg.content.split(" ").splice(1).join(" "));
