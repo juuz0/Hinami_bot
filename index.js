@@ -106,6 +106,9 @@ client.on('ready', () => {
 	 msg.edit(now)},100)
 	 });
 	 }
+	 if(cmd=='now'){
+	 msg.channel.send('kek');
+	 msg.edit('kok');}
    if(cmd==='say'){
      msg.delete();
    	msg.channel.send(""+msg.content.split(" ").splice(1).join(" "));
