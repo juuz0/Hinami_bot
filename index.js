@@ -103,7 +103,7 @@ client.on('ready', () => {
 	 msg.channel.send(now).then(r=>{
 	 setInterval(function(){
 		  var now = new Date();
-	 msg.edit(now)},100)
+	 m.edit(now)},100)
 	 });
 	 }
 	 if(cmd=='now'){
