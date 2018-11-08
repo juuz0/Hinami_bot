@@ -23,7 +23,7 @@
   "homepage": "https://github.com/2002nikhiltanwar/Touka_bot#readme",
   "dependencies": {
     "discord.js": "^11.2.1",
-    "webdict":"0.2.1",
+    "webdict":"0.3.0",
     "mal-scraper":"2.4.2",
     "firebase":"5.0.4",
     "profanity-util":"0.2.0"
