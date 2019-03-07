@@ -20,7 +20,7 @@ client.on('ready', () => {
  		let userlist = msg.mentions.users;
  		if(userlist.size == 0) {
  			if(!args[0]){
- 		msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${msg.author.username}'s Avatar`).setImage(msg.author.avatarURL)}).slice(216,216);
+ 		msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${msg.author.username}'s Avatar`).setImage(msg.author.avatarURL).slice(216)});
  		
  		else if(args[0]){
  			let url = msg.channel.members.array().filter(mmb=>mmb.user.username==args[0])[0].user.avatarURL;
