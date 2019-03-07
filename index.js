@@ -3,53 +3,11 @@ const webdict = require("webdict");
 const client = new Discord.Client();
 const prefix = "h!";
 var year = 2018;
-var birthdays = {
-0:["341958485724102668",new Date(year,9,21)],
-1:["315728369369088003",new Date(year,3,1)],
-2:["361521098111844352",new Date(year,10,11)],
-3:["270125856679002113",new Date(year,3,20)],
-4:["388273713721901056",new Date(year,5,10)],
-5:["270898185961078785",new Date(year,10,3)],
-6:["328503649292517376",new Date(year,8,15)],
-7:["402829897514352641",new Date(year,8,28)],
-8:["360022804357185537",new Date(year,4,29)],
-9:["371673235395182592",new Date(year,10,27)],
-10:["396540743877001216",new Date(year,11,30)],
-11:["429625142444949524",new Date(year,2,31)],
-12:["367740727624466433",new Date(year,10,22)],
-13:["424878859641421824",new Date(year,1,25)],
-14:["385964784803381259",new Date(year,4,25)],
-15:["388984732156690433",new Date(year,0,27)],
-16:["279318185524723712",new Date(year,1,30)],
-17:["274038656002686976",new Date(year,10,2)],
-18:["390072368120332289",new Date(year,0,30)],
-19:["495949599778013184",new Date(year,3,10)],
-20:["364009279101075459",new Date(year,9,6)],
-21:["398930752755990549",new Date(year,2,28)],
-22:["465914713197248534",new Date(year,1,19)],
-23:["443961507051601931",new Date(year,5,15)],
-24:["444896160105103361",new Date(year,10,1)]
-
-}
-
-
 
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
 	client.user.setGame("with Nikhil | h!help")});
  client.on('message', msg => { 
-// 	setInterval(function(){
-// var today = new Date()
-// var b = msg.guild.channels.find(ch=>ch.name=='birthdays');
-// if (b){
-// for(var i in birthdays){
-	
-// if (birthdays[i][1].getDate() == today.getDate() && birthdays[i][1].getMonth() == today.getMonth() && birthdays[i][1].getFullYear() == today.getFullYear()){
-// 	var t =birthdays[i][0];
-// 	var user = client.users.get(t);
-// 	b.send(`Happy Birthday ${user}! Send Cake!`)
-// }}}
-// },2000);
 	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
@@ -62,8 +20,8 @@ client.on('ready', () => {
  		let userlist = msg.mentions.users;
  		if(userlist.size == 0) {
  			if(!args[0]){
- 		msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${msg.author.username}'s Avatar`).setImage(msg.author.avatarURL)});
- 		}
+ 		msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${msg.author.username}'s Avatar`).setImage(msg.author.avatarURL)}).slice(216,216);
+ 		
  		else if(args[0]){
  			let url = msg.channel.members.array().filter(mmb=>mmb.user.username==args[0])[0].user.avatarURL;
  				msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${args[0]}'s Avatar`).setImage(url)});
