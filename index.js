@@ -21,6 +21,7 @@ client.on('ready', () => {
  		if(userlist.size == 0) {
  			if(!args[0]){
  		msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${msg.author.username}'s Avatar`).setImage(msg.author.avatarURL)});
+			}
 														 
  		
  		else if(args[0]){
