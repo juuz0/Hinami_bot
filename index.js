@@ -26,7 +26,7 @@ client.on('ready', () => {
  		else if(args[0]){
  			let url = msg.channel.members.array().filter(mmb=>mmb.user.username==args[0])[0].user.avatarURL;
 		
- 				msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${args[0]}'s Avatar`).setImage(url.slice(0,-4)+"128")});
+ 				msg.channel.send({embed:new Discord.RichEmbed().setTitle(`${args[0]}'s Avatar`).setImage(url)});
  	   	
    
  		}
