@@ -185,7 +185,7 @@ client.on('ready', () => {
 		 webdict('dictionary',args[0]).then(response=>{msg.channel.send({embed:new Discord.RichEmbed().setTitle(args[0]).setDescription(response.definition[0])})});
 			}
 	 if(cmd==='invite'){
-		 let embed = new Discord.RichEmbed().setTitle("Hinami's Invite Link").setDescription("Feel free to uncheck some permissions").addField("Link :-","https://discordapp.com/oauth2/authorize?&client_id=397248599290806272&scope=bot&permissions=339799126");
+		 let embed = new Discord.RichEmbed().setTitle("Hinami's Invite Link").setDescription("Feel free to uncheck some permissions").addField("Link :-","https://discordapp.com/oauth2/authorize?&client_id=446320940280971284&scope=bot&permissions=339799126");
 		 msg.channel.send({embed:embed});
 		 }
 	 if(cmd=='fd'){fd.push(msg.content.split(" ").splice(1).join(" "));
