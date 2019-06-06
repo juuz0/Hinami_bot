@@ -47,7 +47,6 @@ client.on('ready', () => {
     if(cmd === 'mult') {msg.channel.send("Answer is "+(parseFloat(args[0]) * parseFloat(args[1])));}
     if(cmd === 'div') { msg.channel.send("Answer is "+(parseFloat(args[0]) / parseFloat(args[1])));}
     if(cmd === 'sub') { msg.channel.send("Answer is "+(parseFloat(args[0]) - parseFloat(args[1])));}
-	 if(cmd === 'hannah'){msg.channel.send("https://cdn.discordapp.com/attachments/446341741579337738/585741441964441641/unknown.png");}
    if(cmd==='test'){
 	 var role = msg.mentions.roles.first();
 	let mmb = msg.mentions.members.first();
