@@ -13,7 +13,7 @@ client.on('ready', () => {
 	 const channel = msg.guild.channels.find(ch => ch.name === 'polls');
 	 if(!channel) return;
 	if(msg.content.search(/\?/) != -1 && channel) {
-	msg.react(":arrow_up_small:"); msg.react(":arrow_down_small:");
+	msg.react("🔼"); msg.react("🔽");
 	}
  	if(!msg.content.startsWith(prefix) || msg.author.bot) return;
 					     
