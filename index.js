@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const webdict = require("webdict");
 const client = new Discord.Client();
 const prefix = "h!";
-var year = 2018;
 
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
@@ -11,6 +10,12 @@ client.on('ready', () => {
 	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
+	 const dodo = /\?/;
+	 const channel = member.guild.channels.find(ch => ch.name === 'polls');
+	 if(!channel) return;
+	if(msg.content.search(dodo) != -1) {
+	channel.react(":arrow_up_small:"); channel.react(":arrow_down_small:");
+	}
  	if(!msg.content.startsWith(prefix) || msg.author.bot) return;
 					     
 	if (cmd === 'ping') { msg.channel.send('🏓 Pong! Took ' + Math.floor(client.ping) + 'ms'); 
