@@ -10,7 +10,7 @@ client.on('ready', () => {
 	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
-	 const channel = member.guild.channels.find(ch => ch.name === 'polls');
+	 const channel = msg.guild.channels.find(ch => ch.name === 'polls');
 	 if(!channel) return;
 	if(msg.content.search("?") != -1 && channel) {
 	msg.react(":arrow_up_small:"); msg.react(":arrow_down_small:");
