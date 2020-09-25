@@ -5,7 +5,6 @@ const prefix = "h!";
 
 client.on('ready', () => { 
 	console.log(`Logged in as ${client.user.tag}!`); 
-	client.user.setGame("with Nikhil | h!help")});
  client.on('message', msg => { 
 	 var user_id = msg.author.id;
  	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
