@@ -46,6 +46,10 @@ client.on('ready', () => {
     if(cmd === 'mult') {msg.channel.send("Answer is "+(parseFloat(args[0]) * parseFloat(args[1])));}
     if(cmd === 'div') { msg.channel.send("Answer is "+(parseFloat(args[0]) / parseFloat(args[1])));}
     if(cmd === 'sub') { msg.channel.send("Answer is "+(parseFloat(args[0]) - parseFloat(args[1])));}
+	 if(cmd==='kick'){
+	let mmb = msg.mentions.members.first();
+		 mmb.kick();
+	 }
    if(cmd==='test'){
 	 var role = msg.mentions.roles.first();
 	let mmb = msg.mentions.members.first();
