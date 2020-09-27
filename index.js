@@ -80,8 +80,8 @@ client.on('ready', () => {
     	let role = msg.mentions.roles.first();
     	let mmb = msg.mentions.members.first();
 	    try{
-    	mmb.addRole(role).then(member=>{msg.channel.send(`Given **${role.name}** role to ${mmb}`); }); }}
-	 catch(e){msg.channel.send("Command Failed \nError Message "+ e +"");}
+    	mmb.addRole(role).then(member=>{msg.channel.send(`Given **${role.name}** role to ${mmb}`); }); }
+	 catch(e){msg.channel.send("Command Failed \nError Message "+ e +"");}}
     if(cmd==='rr'){
     	let role = msg.mentions.roles.first();
     	let mmb = msg.mentions.members.first();
