@@ -48,8 +48,9 @@ client.on('ready', () => {
     if(cmd === 'sub') { msg.channel.send("Answer is "+(parseFloat(args[0]) - parseFloat(args[1])));}
 	 if(cmd==='kick'){
 	let mmb = msg.mentions.members.first();
+		 let name = mmb.username;
 		 mmb.kick().then(r=>{
-		   msg.channel.send(`Kicked ${mmb.name}`);
+		   msg.channel.send(`Kicked ${name}`);
 	   });
 	 }
    if(cmd==='test'){
