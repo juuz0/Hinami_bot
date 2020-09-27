@@ -48,7 +48,9 @@ client.on('ready', () => {
     if(cmd === 'sub') { msg.channel.send("Answer is "+(parseFloat(args[0]) - parseFloat(args[1])));}
 	 if(cmd==='kick'){
 	let mmb = msg.mentions.members.first();
-		 mmb.kick();
+		 mmb.kick().then(r=>{
+		   msg.channel.send(`Kicked ${mmb.name}`);
+	   });
 	 }
    if(cmd==='test'){
 	 var role = msg.mentions.roles.first();
